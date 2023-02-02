@@ -21,11 +21,11 @@ $^2$ Met Office, Exeter, UK
 ## Overview
 As part of the UK Government’s Net Zero targets, tree cover of a significant proportion of the UK’s land area needs to increase over the coming decades. Given that 70% of the UK land area is used for agriculture these trees will replace some agricultural production. This has the potential to impact Britain’s food security, particularly under a changing climate. Therefore is it crucial that we have evidence to support the right land use decisions being made now. The current strategy focuses on a “land sparing” approach - planting large areas of woodland while intensifying agriculture on the remaining land. Agroforestry, integrating trees into agricultural production systems, represents a “land sharing” approach and has the potential to be a more resilient system of planting trees while retaining food production capacity. The focus of my research, therefore, is to understand how these two approaches can be implemented to maximise carbon sequestration, food production and other ecosystem services.
 
-The challenges for this research are threefold. Firstly, there is little empirical data on agroforestry in the UK. There are a very small number of long running experiments but not enough to be representative of the whole UK. This is where agroforestry modelling is useful. Agroforestry models can simulate multiple configurations of land use in a much shorter time than experimenting in the field. However, they can be computationally expensive to run. Model emulation, a statistical approximation of a model, can reduce the runtime of these models. This could be crucial for optimising these models for carbon sequestration as such techniques require iteration over multiple model runs. 
+The challenges for this research are threefold. Firstly, there is little empirical data on agroforestry in the UK. There are a very small number of long running experiments but not enough to be representative of the whole UK and thus too little to extrapolate from. This is where agroforestry modelling is useful. Agroforestry models can simulate multiple configurations of land use in a much shorter time than experimenting in the field. However, given the sparse number of agroforestry observations to fit model parameterisations to, simulating agforestry growth will introduce substantial uncertainty which must be quantified.
 
-The second challenge is factoring climate change into an assessment of agroforestry potential. I will quantify how these models respond to the uncertainty inherent in climate change projection data and use it to determine how resilient different land use configurations are to future climates. Using techniques such as integrated Gaussian processes to emulate the models can achieve this uncertainty quantification.
+The second challenge is factoring climate change into an assessment of agroforestry potential. The UK has good climate projection data, courtesy of organisaitons like the Met Office, but by its nature is uncertain and comes as an ensemble of model runs. This uncertainty must also be quantified and propogated through any agroforestry modelling. This uncertainty could be useful in determining how resilient simulated land use configurations are to future climates. 
 
-The third challenge explores how agroforestry will be adopted. A physical understanding of what combination of land use types leads to optimal natural capital doesn’t mean that it is desirable or even possible to implement. Therefore an assessment of policy options is needed. I will use techniques such as agent based modelling and decision theory to simulate how different incentives affect the uptake of tree planting in a way that maximises carbon sequestration but also food security. 
+The third challenge explores how agroforestry will be adopted and how uncertainty under climate change can be translated into the language of risk. For instance, under a changing climate it might be lower yielding but lower overall risk to plant short rotation coppice on a 7-year rotation rather than rely on the successful growth and harvest of a 50 year timber crop, even if the timber crop is higher financially and carbon yielding in the full term of the simulation. Uncertainty under different climate scenarios can be analyised in this risk framing.
 
 
 
@@ -42,7 +42,7 @@ The third challenge explores how agroforestry will be adopted. A physical unders
 ### Data
 
 #### **Agroforestry data**
-Collated from literature and field studies. Collaborating with [Prof. Paul Burgess]() on this.
+Collated from literature and field studies. Collaborating with [Prof. Paul Burgess](https://www.cranfield.ac.uk/people/professor-paul-burgess-784015) on this.
 Extent, quality and completeness of data still to be assessed.
 
 
@@ -60,7 +60,7 @@ https://data.ceda.ac.uk/badc/deposited2021/chess-scape/data
 *RCP = Representative Concentration Pathway
 
 #### **UK soil data**
-Soil data acquired from a collaborator in the [Net Zero Plus]() project, source unkown.
+Soil data acquired from a collaborator in the [Net Zero Plus](https://netzeroplus.ac.uk/) project, source unkown.
 
 
 #### **Other data**
@@ -69,7 +69,7 @@ Other potentially useful data could be land cover data to exclude areas of the U
 
 
 ### Agroforestry model
-After a literature review on agroforestry modelling, I chose [Yield-SAFE]() for this investigation. It is a parameter-sparse, biophysical, mechanistic model which simulates biomass accumulation of co-located trees and crops. It requires only daily meteorological data and parameters describing the soil, tree and crop properties being simulated. 
+After a literature review on agroforestry modelling, I chose [Yield-SAFE](https://doi.org/10.1016/j.ecoleng.2006.09.017) for this investigation. It is a parameter-sparse, biophysical, mechanistic model which simulates biomass accumulation of co-located trees and crops. It requires only daily meteorological data and parameters describing the soil, tree and crop properties being simulated. 
 
 
 ### Bayesian model calibration
